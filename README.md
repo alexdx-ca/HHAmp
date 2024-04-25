@@ -1,4 +1,4 @@
-## *Ample*: A simple music client for [Ampache](https://ampache.org/) 
+## *HH-Amp* (Hip-Hop Amp): A simple music client for [Ampache](https://ampache.org/) 
 Built with [Svelte](https://svelte.dev/) & [wavesurfer.js](https://github.com/katspaugh/wavesurfer.js)
 
 <img src="https://github.com/mitchray/ample/assets/5735900/e2564e30-d7af-4fc8-b2e1-bbff93a3356e" width=800 alt="Ample screenshot" />
@@ -55,3 +55,12 @@ Edit or add new languages via [Inlang](https://inlang.com/editor/github.com/mitc
 - For building ```npm run build```, and see the contents of ```dist```
 
 Additional console logging can be enabled by setting ```debugMode true``` in ```src/stores/server.js```
+
+## Thanks to Mitch Ray for Ample 2.03
+
+A big thank you to [Mitch Ray](https://github.com/mitchray/) for creating the original version of Ample 2.03!
+Your hard work and dedication have provided us with a fantastic foundation to build upon.
+We greatly appreciate your contributions to the open-source community.
+
+[Original Ample 2.03 Repository](https://github.com/mitchray/ample/tree/2.x)
+
