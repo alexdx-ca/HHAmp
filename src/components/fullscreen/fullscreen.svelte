@@ -8,7 +8,7 @@
     import SVGDown from "/src/images/keyboard_arrow_down.svg";
 
     let hue;
-    let defaultHue = 240;
+    let defaultHue = 121;
     let currentTab = "nowPlaying";
 
     $: hue = hue || defaultHue;

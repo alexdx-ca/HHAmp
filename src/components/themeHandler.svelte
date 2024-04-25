@@ -6,7 +6,7 @@
     import { customHue } from "../stores/status";
 
     let hue;
-    let defaultHue = 240;
+    let defaultHue = 121;
 
     $: hue = $customHue ? $customHue : defaultHue;
 

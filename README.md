@@ -1,4 +1,4 @@
-## *HH-Amp* (Hip-Hop Amp): A simple music client for [Ampache](https://ampache.org/) 
+## *HH-Amp (Hip-Hop Amp)*: A simple music client for [Ampache](https://ampache.org/) 
 Built with [Svelte](https://svelte.dev/) & [wavesurfer.js](https://github.com/katspaugh/wavesurfer.js)
 
 <img src="https://github.com/mitchray/ample/assets/5735900/e2564e30-d7af-4fc8-b2e1-bbff93a3356e" width=800 alt="Ample screenshot" />
