@@ -58,17 +58,17 @@
         setTimeout(() => $MediaPlayer.setWaveColors(), 0);
     };
 
+    import dotenv from 'dotenv';
+    dotenv.config(); // Load environment variables from .env file
+
     async function getServerURL() {
         let hardcodedServerURL;
 
         // load from config file if present & set
         try {
-            hardcodedServerURL = await fetch(`${import.meta.env.BASE_URL}/ample.json`)
-                .then(response => response.json())
-                .then(data => {
-                    return data.ampacheURL;
-                });
+            hardcodedServerURL = process.env.AMPACHE_URL;
         } catch (e) {
+            console.error("Error reading environment variable:", e);
         }
 
         if (hardcodedServerURL) {
@@ -77,6 +77,8 @@
         } else {
             $serverURL = JSON.parse(localStorage.getItem('AmpleServerURL')) || '';
         }
+
+        return serverURL;
     }
 
     onMount(async () => {
