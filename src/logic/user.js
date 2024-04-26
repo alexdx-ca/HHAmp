@@ -55,34 +55,49 @@ export const validateSession = async () => {
         if (result.auth) {
             await login({ auth: result.auth, username: cachedSession.username });
         } else {
-            logout();
+            // If not logged in, try logging in as guest
+            const guestLoginResult = await loginNew({ passphrase: 'demodemo', username: 'guest' });
+            
+            if (guestLoginResult.auth) {
+                await login({ auth: guestLoginResult.auth, username: 'guest' });
+            } else {
+                // If guest login failed, log out
+                logout();
+            }
         }
     } catch (e) {
         logout();
     }
 }
 
-export const loginNew = async ({passphrase = null, username = null }) => {
+export const loginNew = async ({ passphrase = null, username = null }) => {
     let result;
 
-    // if username, attempt login with username/password
-    if (username) {
-        let time = Math.floor(new Date().getTime() / 1000);
-        let encryptedPassword = get(API).encryptPassword({ password: passphrase, time: time });
+    try {
+        // if username, attempt login with username/password
+        if (username) {
+            let time = Math.floor(new Date().getTime() / 1000);
+            let encryptedPassword = get(API).encryptPassword({ password: passphrase, time: time });
 
-        result = await get(API).handshake({ auth: encryptedPassword, user: username, timestamp: time, version: get(APIVersion) });
-    } else {
-        result = await get(API).handshake({ auth: passphrase, version: get(APIVersion) });
+            result = await get(API).handshake({ auth: encryptedPassword, user: username, timestamp: time, version: get(APIVersion) });
+        } else {
+            result = await get(API).handshake({ auth: passphrase, version: get(APIVersion) });
+        }
+
+        if (result.auth) {
+            await login({ auth: result.auth, username: username })
+        } else {
+            logout();
+        }
+
+        return result;
+    } catch (error) {
+        console.error('Error during login:', error);
+        logout(); // Log out the user in case of an error
+        return { error: 'An error occurred during login.' };
     }
+};
 
-    if (result.auth) {
-        await login({ auth: result.auth, username: username })
-    } else {
-        logout();
-    }
-
-    return result;
-}
 
 /**
  * Extend an existing session by pinging the server with auth
