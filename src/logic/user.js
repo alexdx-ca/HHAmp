@@ -50,34 +50,17 @@ export const validateSession = async () => {
     try {
         API.set(new AmpacheAPI({ url: get(serverURL), debug: false }));
 
-        if (cachedSession && cachedSession.userToken) {
-            // If there's a cached session, attempt to ping the server with the stored authentication token
-            let result = await get(API).ping({ auth: cachedSession.userToken });
+        let result = await get(API).ping({ auth: cachedSession?.userToken });
 
-            if (result.auth) {
-                // If the ping is successful, log in using the cached session
-                await login({ auth: result.auth, username: cachedSession.username });
-            } else {
-                // If the ping fails, log out
-                logout();
-            }
+        if (result.auth) {
+            await login({ auth: result.auth, username: cachedSession.username });
         } else {
-            // If there's no cached session, attempt to login as a guest
-            let guestLoginResult = await get(API).handshake({ auth: null });
-            
-            if (guestLoginResult.auth) {
-                // If the guest login is successful, log in as guest
-                await login({ auth: guestLoginResult.auth });
-            } else {
-                // If the guest login fails, log out
-                logout();
-            }
+            logout();
         }
     } catch (e) {
         logout();
     }
 }
-
 
 export const loginNew = async ({passphrase = null, username = null }) => {
     let result;
