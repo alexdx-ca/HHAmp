@@ -1,5 +1,5 @@
 import { get } from 'svelte/store';
-import { ampleVersion } from "../stores/player";
+import { hhampVersion } from "../stores/player";
 
 class MusicBrainz {
     constructor() {
@@ -8,7 +8,7 @@ class MusicBrainz {
         this.headers = new Headers({
             "Accept"       : "application/json",
             "Content-Type" : "application/json",
-            "User-Agent"   : `Ample - Ampache client/${get(ampleVersion)} ( github.com/mitchray/ample )`
+            "User-Agent"   : `HHAmp - Ampache client/${get(hhampVersion)} ( github.com/mitchray/hhamp )`
         });
     }
 

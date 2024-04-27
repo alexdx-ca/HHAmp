@@ -33,11 +33,11 @@
     }
 
     function saveLimit() {
-        localStorage.setItem(`Ample${paginationLimitID}`, JSON.stringify(limit));
+        localStorage.setItem(`HHAmp${paginationLimitID}`, JSON.stringify(limit));
     }
 
     onMount(() => {
-        limit = JSON.parse(localStorage.getItem(`Ample${paginationLimitID}`)) || defaultLimit;
+        limit = JSON.parse(localStorage.getItem(`HHAmp${paginationLimitID}`)) || defaultLimit;
         loaded = true;
     });
 </script>

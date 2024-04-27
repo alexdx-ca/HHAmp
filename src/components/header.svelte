@@ -46,7 +46,7 @@
 
     function handleSidebarToggle() {
         let inverted = !$SidebarIsOpen;
-        localStorage.setItem('AmpleSidebarIsOpen', JSON.stringify(inverted));
+        localStorage.setItem('HHAmpSidebarIsOpen', JSON.stringify(inverted));
         SidebarIsOpen.set(inverted);
     }
 

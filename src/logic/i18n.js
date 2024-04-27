@@ -7,6 +7,6 @@ export function setupI18n() {
 
     init({
         fallbackLocale: 'en',
-        initialLocale: JSON.parse(localStorage.getItem('AmpleLanguage')) || getLocaleFromNavigator(),
+        initialLocale: JSON.parse(localStorage.getItem('HHAmpLanguage')) || getLocaleFromNavigator(),
     });
 }

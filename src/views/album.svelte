@@ -143,7 +143,7 @@
                 </div>
                 <div class="songs-container">
                     <div class="songs page-main">
-                        {#each [...album.ampleSongs] as [key, value]}
+                        {#each [...album.hhampSongs] as [key, value]}
                             {@const subtitle = (album.discsubtitles.length > 0) ? album.discsubtitles.find((disc) => disc.position === key)?.title : null}
                             <section>
                                 <Lister
@@ -155,7 +155,7 @@
                                     showArt={false}
                                     discSubtitle={subtitle}
                                     actionData={{
-                                        disable: [...album.ampleSongs].length < 2,
+                                        disable: [...album.hhampSongs].length < 2,
                                         type: "album",
                                         id: album.id,
                                         mode: "miniButtons",

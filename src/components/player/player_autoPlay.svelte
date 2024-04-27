@@ -54,18 +54,18 @@
     }
 
     function handleSelected() {
-        localStorage.setItem('AmpleAutoPlayPlaylist', JSON.stringify($selectedPlaylist.id));
+        localStorage.setItem('HHAmpAutoPlayPlaylist', JSON.stringify($selectedPlaylist.id));
         AutoPlayPlaylist.set($selectedPlaylist.id);
     }
 
     function handleCleared() {
         AutoPlayPlaylist.set(null);
-        localStorage.setItem('AmpleAutoPlayPlaylist', JSON.stringify(null));
+        localStorage.setItem('HHAmpAutoPlayPlaylist', JSON.stringify(null));
     }
 
     function toggleEnabled() {
         let inverted = !$AutoPlayEnabled;
-        localStorage.setItem('AmpleAutoPlayEnabled', JSON.stringify(inverted));
+        localStorage.setItem('HHAmpAutoPlayEnabled', JSON.stringify(inverted));
         AutoPlayEnabled.set(inverted);
     }
 

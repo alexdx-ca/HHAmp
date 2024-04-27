@@ -16,7 +16,7 @@
             document.body.classList.remove('theme-is-light');
         }
 
-        localStorage.setItem('AmpleTheme', JSON.stringify(theme));
+        localStorage.setItem('HHAmpTheme', JSON.stringify(theme));
         Theme.set(theme);
 
         // update waveform colors when theme is toggled

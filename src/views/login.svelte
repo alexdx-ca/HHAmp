@@ -7,7 +7,7 @@
     import { API } from "../stores/api.js";
     import { serverVersion, serverURL, serverIsHardcoded } from "../stores/server";
     import { PageTitle, Theme } from "../stores/status";
-    import { ampleVersion } from "../stores/player";
+    import { hhampVersion } from "../stores/player";
 
     import { loginNew } from '../logic/user';
     import { getRandomInt } from '../logic/helper';
@@ -18,7 +18,7 @@
     import Tab from "../components/tabs/tab.svelte";
     import UserMenu from '../components/userMenu.svelte';
 
-    import SVGAmpleLogo from "/src/images/ample_logo.svg";
+    import SVGHHAmpLogo from "/src/images/hhamp_logo.svg";
     import SVGLogin from "/src/images/login.svg";
 
     let theme;
@@ -48,7 +48,7 @@
     $: versionCheck = $serverVersion.charAt(0);
 
     // save server URL in localstorage
-    $: $serverURL, localStorage.setItem('AmpleServerURL', JSON.stringify($serverURL));
+    $: $serverURL, localStorage.setItem('HHAmpServerURL', JSON.stringify($serverURL));
 
     const handleSubmitUsername = async (e) => {
         setServerDetails();
@@ -94,7 +94,7 @@
         {/if}
 
         <div class="logo">
-            <SVGAmpleLogo />
+            <SVGHHAmpLogo />
         </div>
 
         <Tabs bind:activeTabValue={currentTab} items={tabItems}>
@@ -162,7 +162,7 @@
     </div>
 
     <div class="meta">
-        <span>Ample v{$ampleVersion}</span> {#if $serverVersion}- <span>Ampache v{$serverVersion}</span>{/if}
+        <span>HHAmp v{$hhampVersion}</span> {#if $serverVersion}- <span>Ampache v{$serverVersion}</span>{/if}
     </div>
 </div>
 

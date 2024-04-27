@@ -20,13 +20,13 @@ export const login = async ({ auth, username = null }) => {
         userInfo.userName = username;
     }
 
-    localStorage.setItem('AmpleAuth', JSON.stringify(userInfo));
+    localStorage.setItem('HHAmpAuth', JSON.stringify(userInfo));
     isLoggedIn.set(true);
 }
 
 export const logout = () => {
-    localStorage.setItem('AmpleAuth', null);
-    localStorage.setItem('AmpleAPIKey', null);
+    localStorage.setItem('HHAmpAuth', null);
+    localStorage.setItem('HHAmpAPIKey', null);
     userName.set(null);
     isLoggedIn.set(false);
 
@@ -40,7 +40,7 @@ export const logout = () => {
 }
 
 export const validateSession = async () => {
-    let cachedSession = JSON.parse(localStorage.getItem('AmpleAuth'));
+    let cachedSession = JSON.parse(localStorage.getItem('HHAmpAuth'));
 
     if (!get(serverURL)) {
         logout();

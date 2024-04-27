@@ -85,8 +85,8 @@ export const getAlbum = async ({id, withTracks = false, artAnalysis = false}) =>
     let album = await get(API).album({ filter: id });
 
     if (withTracks) {
-        album.ampleSongs = await getSongsFromAlbum({id: id, groupByDisc: true});
-        debugHelper(album.ampleSongs, "getAlbum - getSongsFromAlbum");
+        album.hhampSongs = await getSongsFromAlbum({id: id, groupByDisc: true});
+        debugHelper(album.hhampSongs, "getAlbum - getSongsFromAlbum");
     }
 
     if (artAnalysis) {

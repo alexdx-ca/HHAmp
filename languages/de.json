@@ -297,7 +297,7 @@
   "text.date": "Datum",
   "text.size": "Größe",
   "text.type": "Typ",
-  "text.versionWarning": "Diese Version von Ample unterstützt nur Ampache v6 und höher. Version {serverVersion} erkannt.",
+  "text.versionWarning": "Diese Version von HHAmp unterstützt nur Ampache v6 und höher. Version {serverVersion} erkannt.",
   "text.apiKey": "API-Schlüssel",
   "text.edit": "Bearbeiten",
   "text.password": "Passwort",

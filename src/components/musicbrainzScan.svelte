@@ -30,13 +30,13 @@
         flagged: 0,
         missing: 0,
     };
-    let filters = JSON.parse(localStorage.getItem('AmpleMusicBrainzFilters')) || {};
+    let filters = JSON.parse(localStorage.getItem('HHAmpMusicBrainzFilters')) || {};
 
     $: {
         queryURL = `https://musicbrainz.org/ws/2/recording/?artist=${data.mbid}&limit=${limit}&offset=${loadCount * limit}`;
 
         // save filters
-        localStorage.setItem('AmpleMusicBrainzFilters', JSON.stringify(filters));
+        localStorage.setItem('HHAmpMusicBrainzFilters', JSON.stringify(filters));
 
         if (loaded) {
             filteredRecordings = combinedSources;

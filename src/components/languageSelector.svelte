@@ -5,7 +5,7 @@
         e.preventDefault();
         let newLanguage = e.target.value;
         locale.set(newLanguage);
-        localStorage.setItem('AmpleLanguage', JSON.stringify(newLanguage));
+        localStorage.setItem('HHAmpLanguage', JSON.stringify(newLanguage));
     }
 </script>
 

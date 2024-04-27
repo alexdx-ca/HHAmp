@@ -63,7 +63,7 @@
     }
 
     function loadSavedColumns() {
-        let savedColumns = JSON.parse(localStorage.getItem(`Ample${listerColumnsID}`));
+        let savedColumns = JSON.parse(localStorage.getItem(`HHAmp${listerColumnsID}`));
 
         if (savedColumns !== null) {
             for (let i = 0; i < $availableColumns.length; i++) {

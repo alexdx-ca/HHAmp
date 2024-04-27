@@ -15,7 +15,7 @@
 - Advanced search inputs for Added/Update use date inputs
 
 ### Changed
-- Prefix all localstorage values with 'Ample', you will lose your settings sorry :(
+- Prefix all localstorage values with 'HHAmp', you will lose your settings sorry :(
 
 ## [2.0.0] - 2023-06-30
 ### Requires at least Ampache 6.0.0
@@ -53,7 +53,7 @@
 ### Added
 - Artist Mix recommendations on the home page (based on trending and 4/5 rated artists)
 - Alert popups, e.g. when AutoPlay adds songs to queue or when songs below set rating are skipped
-- Give each page its own title to avoid a sea of "Ample" in browser history
+- Give each page its own title to avoid a sea of "HHAmp" in browser history
 - 
 ### Changed
 - Removed rating clear button; now click the current rating to clear it
@@ -84,14 +84,14 @@
 - Media would still play after logging out
 
 ## [0.50.0] - 2022-11-20
-### The folder structure has changed due to switching to Vite for compiling. Remove contents of ```ample``` folder before updating.
+### The folder structure has changed due to switching to Vite for compiling. Remove contents of ```hhamp``` folder before updating.
 ### Additionally, Vite has a different method of URL management, let me know if things break for you.
 ### NGINX users update your rewrite from ```index.php``` to ```index.html```
 
 ### Added
 - Search results are split into 'starts with' and 'contains' groups
 - Start of a 'fullscreen' mode for Now Playing on smaller devices
-  - <img src="https://user-images.githubusercontent.com/5735900/202880766-78bac0cc-328d-40da-93d4-ff7bffa0dce5.jpg" width=261 alt="Ample fullscreen mode" />
+  - <img src="https://user-images.githubusercontent.com/5735900/202880766-78bac0cc-328d-40da-93d4-ff7bffa0dce5.jpg" width=261 alt="HHAmp fullscreen mode" />
 
 ### Changed
 - Header logout and theme switch combined into a menu

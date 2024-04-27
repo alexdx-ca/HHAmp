@@ -53,13 +53,13 @@
 
     function toggleShowExpanded() {
         let inverted = !$ShowExpandedAlbums;
-        localStorage.setItem('AmpleShowExpandedAlbums', JSON.stringify(inverted));
+        localStorage.setItem('HHAmpShowExpandedAlbums', JSON.stringify(inverted));
         ShowExpandedAlbums.set(inverted);
     }
 
     function toggleGroupByReleaseType() {
         let inverted = !$GroupAlbumsByReleaseType;
-        localStorage.setItem('AmpleGroupAlbumsByReleaseType', JSON.stringify(inverted));
+        localStorage.setItem('HHAmpGroupAlbumsByReleaseType', JSON.stringify(inverted));
         GroupAlbumsByReleaseType.set(inverted);
     }
 

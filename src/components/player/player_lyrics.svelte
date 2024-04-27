@@ -5,7 +5,7 @@
 
     function toggleLyrics() {
         let inverted = !$ShowLyrics;
-        localStorage.setItem('AmpleShowLyrics', JSON.stringify(inverted));
+        localStorage.setItem('HHAmpShowLyrics', JSON.stringify(inverted));
         ShowLyrics.set(inverted);
     }
 </script>

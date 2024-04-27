@@ -59,7 +59,7 @@ class Player {
                 this.wavesurfer.setVolume(this.globalVolume);
             }
 
-            localStorage.setItem('AmplePlayerVolume', JSON.stringify(value));
+            localStorage.setItem('HHAmpPlayerVolume', JSON.stringify(value));
         });
 
         NowPlayingQueue.subscribe(value => {
@@ -490,7 +490,7 @@ class Player {
      */
     repeat() {
         let inverted = !this.repeatEnabled;
-        localStorage.setItem('AmpleRepeatEnabled', JSON.stringify(inverted));
+        localStorage.setItem('HHAmpRepeatEnabled', JSON.stringify(inverted));
         RepeatEnabled.set(inverted);
         debugHelper('repeat: ' + this.repeatEnabled);
     }

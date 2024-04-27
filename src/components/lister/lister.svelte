@@ -162,7 +162,7 @@
     }
 
     onMount(() => {
-        let savedDisplayAsTable = JSON.parse(localStorage.getItem(`Ample${$listerDisplayID}`));
+        let savedDisplayAsTable = JSON.parse(localStorage.getItem(`HHAmp${$listerDisplayID}`));
 
         if (savedDisplayAsTable !== null) {
             $_displayAsTable = savedDisplayAsTable;

@@ -28,7 +28,7 @@
             }
         }
 
-        localStorage.setItem(`Ample${listerColumnsID}`, JSON.stringify(visibleColumnIds));
+        localStorage.setItem(`HHAmp${listerColumnsID}`, JSON.stringify(visibleColumnIds));
     }
 </script>
 

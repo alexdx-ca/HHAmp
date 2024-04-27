@@ -36,31 +36,31 @@
 
     function handleAlternateVersionsToggle() {
         let inverted = !$ShowNotificationAlternateVersions;
-        localStorage.setItem('AmpleShowNotificationAlternateVersions', JSON.stringify(inverted));
+        localStorage.setItem('HHAmpShowNotificationAlternateVersions', JSON.stringify(inverted));
         ShowNotificationAlternateVersions.set(inverted);
     }
 
     function handleGainTagsMissingToggle() {
         let inverted = !$ShowNotificationGainTagsMissing;
-        localStorage.setItem('AmpleShowNotificationGainTagsMissing', JSON.stringify(inverted));
+        localStorage.setItem('HHAmpShowNotificationGainTagsMissing', JSON.stringify(inverted));
         ShowNotificationGainTagsMissing.set(inverted);
     }
 
     function handleRatingMissingToggle() {
         let inverted = !$ShowNotificationRatingMissing;
-        localStorage.setItem('AmpleShowNotificationRatingMissing', JSON.stringify(inverted));
+        localStorage.setItem('HHAmpShowNotificationRatingMissing', JSON.stringify(inverted));
         ShowNotificationRatingMissing.set(inverted);
     }
 
     function handleLyricsMissingToggle() {
         let inverted = !$ShowNotificationLyricsMissing;
-        localStorage.setItem('AmpleShowNotificationLyricsMissing', JSON.stringify(inverted));
+        localStorage.setItem('HHAmpShowNotificationLyricsMissing', JSON.stringify(inverted));
         ShowNotificationLyricsMissing.set(inverted);
     }
 
     function handleLyricsNotTimestampedToggle() {
         let inverted = !$ShowNotificationLyricsNotTimestamped;
-        localStorage.setItem('AmpleShowNotificationLyricsNotTimestamped', JSON.stringify(inverted));
+        localStorage.setItem('HHAmpShowNotificationLyricsNotTimestamped', JSON.stringify(inverted));
         ShowNotificationLyricsNotTimestamped.set(inverted);
     }
 </script>
