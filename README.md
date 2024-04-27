@@ -1,7 +1,7 @@
 ## *HHAmp (Hip-Hop Amp)*: A simple music client for [Ampache](https://ampache.org/) 
 Built with [Svelte](https://svelte.dev/) & [wavesurfer.js](https://github.com/katspaugh/wavesurfer.js)
 
-<img src="https://github.com/mitchray/hhamp/assets/5735900/e2564e30-d7af-4fc8-b2e1-bbff93a3356e" width=800 alt="HHAmp screenshot" />
+<img src="https://github.com/mitchray/ample/assets/5735900/e2564e30-d7af-4fc8-b2e1-bbff93a3356e" width=800 alt="Ample screenshot" />
 
 ## Setting expectations
 - Largely untested with multiple users
@@ -9,7 +9,7 @@ Built with [Svelte](https://svelte.dev/) & [wavesurfer.js](https://github.com/ka
 - It is designed to be a front-end companion to an existing Ampache server, not a complete replacement
 
 ## Demo
-[View demo](https://hhamp-player.vercel.app/)
+[View demo](https://ample-player.vercel.app/)
 - User ```demo``` 
 - Password ```demodemo```
 
@@ -31,7 +31,7 @@ Built with [Svelte](https://svelte.dev/) & [wavesurfer.js](https://github.com/ka
 - 'Unrated' dashboard + Multi-rater
 
 ## Translations
-Edit or add new languages via [Inlang](https://inlang.com/editor/github.com/mitchray/hhamp)
+Edit or add new languages via [Inlang](https://inlang.com/editor/github.com/mitchray/ample)
 
 ## Requirements
 - [Ampache](https://ampache.org/) 6+
@@ -39,11 +39,11 @@ Edit or add new languages via [Inlang](https://inlang.com/editor/github.com/mitc
 
 ## Installing
 - Easy mode (recommended)
-  - Grab a prebuilt [release](https://github.com/mitchray/hhamp/releases)
+  - Grab a prebuilt [release](https://github.com/alexdx-ca/hhamp/releases)
   - Copy the ```hhamp``` folder into your Ampache server ```public``` folder
   - Access by adding ```/hhamp``` to your Ampache server address e.g. ```yourampache.com/hhamp``` or ```localhost/ampache/hhamp```
 - Hard mode
-  - Grab a prebuilt [release](https://github.com/mitchray/hhamp/releases) or build yourself from Git repository (see Developing)
+  - Grab a prebuilt [release](https://github.com/alexdx-ca/hhamp/releases) or build yourself from Git repository (see Developing)
   - Put it anywhere you like, but you will have to deal with [CORS](https://enable-cors.org/server.html) if it is on a different domain/subdomain from the Ampache server you are connecting to.
 - Enter the URL of the Ampache server you wish to connect to on the login screen 
   - Alternatively add the URL to ```hhamp.json``` to hardcode it (rename ```hhamp.json.dist``` & use the full URL with no trailing slash i.e. ```https://yourampache.com```)
