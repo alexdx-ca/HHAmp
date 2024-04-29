@@ -1,4 +1,8 @@
 # Changelog
+## [2.0.4] - 2024-04-27
+
+### Fixed
+Automatic login with guest:demodemo if there is domain name predefined in hhamp.json
 
 ## [2.0.3] - 2024-01-08
 ### Requires at least Ampache 6.0.1

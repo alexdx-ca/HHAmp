@@ -1,6 +1,6 @@
 {
-  "name": "hh-amp-ampache-client",
-  "version": "2.0.3",
+  "name": "hhamp-ampache-client",
+  "version": "2.0.4",
   "type": "module",
   "scripts": {
     "build": "vite build && npm run copy",
