@@ -1,4 +1,5 @@
 {
+  "$schema": "https://inlang.com/schema/inlang-message-format",
   "text.advancedSearch": "Advanced Search",
   "text.album": "Album",
   "text.albums": "Albums",
